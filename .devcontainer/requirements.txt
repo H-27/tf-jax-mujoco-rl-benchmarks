@@ -1,0 +1,37 @@
+--find-links https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
+# Core
+numpy==1.26.4
+scipy>=1.12.0
+pandas==2.2.3
+absl-py==2.1.0
+PyYAML==6.0.1
+tqdm==4.66.4
+
+# RL envs (uses mujoco 3.x)
+# gymnasium[mujoco] pulls mujoco, mujoco-bindings, imageio-ffmpeg, etc.
+gymnasium==0.29.1
+gymnasium[mujoco]==0.29.1
+mujoco==3.1.4
+
+# Rendering (headless via EGL)
+imageio==2.34.1
+pillow==10.3.0
+glfw==2.7.0
+opencv-python
+
+# TensorFlow (GPU via container host driver when available)
+tensorflow[and-cuda]==2.17.1
+tensorflow-probability==0.25.0
+
+# JAX stack (GPU via cuda12 wheels)
+jax[cuda12]==0.4.27
+optax==0.1.8
+flax==0.8.2
+chex==0.1.86
+distrax==0.1.5
+
+# Dev tools (optional)
+black==24.8.0
+
+# Optional hyperparameter optimization
+optuna
